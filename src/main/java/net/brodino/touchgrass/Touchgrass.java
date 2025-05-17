@@ -53,6 +53,10 @@ public class Touchgrass implements ModInitializer {
             return ActionResult.PASS;
         }
 
+        if (player.isSpectator()) {
+            return ActionResult.PASS;
+        }
+
         if (!hand.equals(Hand.MAIN_HAND)) {
             return ActionResult.PASS;
         }
